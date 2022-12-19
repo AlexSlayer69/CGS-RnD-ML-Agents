@@ -23,8 +23,14 @@ public class Platform : MonoBehaviour
 
     }
 
-   /* private void giveAngularVelocity()
+   public void rotateX(float angle)
     {
-        
-    }*/
+        rb.rotation = Quaternion.Euler(rb.rotation.eulerAngles.x + angle,
+            rb.rotation.eulerAngles.y, rb.rotation.eulerAngles.z);
+    }
+    public void rotateZ(float angle)
+    {
+        rb.rotation = Quaternion.Euler(rb.rotation.eulerAngles.x,
+            rb.rotation.eulerAngles.y, rb.rotation.eulerAngles.z + angle);
+    }
 }
