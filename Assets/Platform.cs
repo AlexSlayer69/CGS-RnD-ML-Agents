@@ -15,22 +15,16 @@ public class Platform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
-    private void OnCollisionEnter(Collision collision) // Check the localPosition of the sphere
-    {
-        Debug.Log(collision.collider.transform.localPosition);
-
-    }
-
    public void rotateX(float angle)
     {
-        rb.rotation = Quaternion.Euler(rb.rotation.eulerAngles.x + angle,
+        rb.rotation = Quaternion.Euler(angle,
             rb.rotation.eulerAngles.y, rb.rotation.eulerAngles.z);
     }
     public void rotateZ(float angle)
     {
         rb.rotation = Quaternion.Euler(rb.rotation.eulerAngles.x,
-            rb.rotation.eulerAngles.y, rb.rotation.eulerAngles.z + angle);
+            rb.rotation.eulerAngles.y,angle);
     }
 }
