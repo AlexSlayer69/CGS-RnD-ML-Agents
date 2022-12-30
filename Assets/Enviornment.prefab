@@ -46,7 +46,6 @@ GameObject:
   - component: {fileID: 4948801019565332025}
   - component: {fileID: 4948801019565332026}
   - component: {fileID: 4948801019565332022}
-  - component: {fileID: 4948801019565332021}
   - component: {fileID: 4948801019565332019}
   - component: {fileID: 4948801019565332020}
   - component: {fileID: 4948801019565332018}
@@ -66,7 +65,7 @@ Transform:
   m_GameObject: {fileID: 4948801019565332028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.2667723, y: -1.707572, z: 6.6731024}
-  m_LocalScale: {x: 20, y: 1, z: 20}
+  m_LocalScale: {x: 15, y: 1, z: 15}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2483465510707611127}
@@ -151,18 +150,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 0
---- !u!114 &4948801019565332021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4948801019565332028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7257ecb425c843047a06630c91d760aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4948801019565332019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_BrainParameters:
     VectorObservationSize: 6
-    NumStackedVectorObservations: 2
+    NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 2
       BranchSizes: 
@@ -210,7 +197,6 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 1000
   targetTransform: {fileID: 4948801020539449389}
-  platform: {fileID: 4948801019565332021}
 --- !u!114 &4948801019565332018
 MonoBehaviour:
   m_ObjectHideFlags: 0

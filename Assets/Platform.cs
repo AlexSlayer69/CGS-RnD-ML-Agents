@@ -12,12 +12,7 @@ public class Platform : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
-   public void rotateX(float angle)
+   /*public void rotateX(float angle)
     {
         rb.rotation = Quaternion.Euler(angle,
             rb.rotation.eulerAngles.y, rb.rotation.eulerAngles.z);
@@ -27,4 +22,10 @@ public class Platform : MonoBehaviour
         rb.rotation = Quaternion.Euler(rb.rotation.eulerAngles.x,
             rb.rotation.eulerAngles.y,angle);
     }
+
+    public void rotateY(float angle)
+    {
+        rb.rotation = Quaternion.Euler(rb.rotation.eulerAngles.x,
+            angle, rb.rotation.eulerAngles.z);
+    }*/
 }
