@@ -8,12 +8,11 @@ using Unity.MLAgents.Sensors;
 public class BalanceAgent : Agent
 {
     [SerializeField] private Transform targetTransform;
-    
     public override void CollectObservations(VectorSensor sensor)
     {
-        sensor.AddObservation(transform.localRotation.eulerAngles.z);
-        sensor.AddObservation(transform.localRotation.eulerAngles.x);
-        sensor.AddObservation(transform.localRotation.eulerAngles.y);
+        sensor.AddObservation(transform.localRotation.z);
+        sensor.AddObservation(transform.localRotation.x);
+        sensor.AddObservation(targetTransform.GetComponent<Rigidbody>().velocity);
         sensor.AddObservation(targetTransform.localPosition - transform.localPosition);
     }
 
@@ -31,11 +30,6 @@ public class BalanceAgent : Agent
             (transform.localRotation.x > -0.25f && actionX < 0f))
         {
             transform.Rotate(new Vector3(1, 0, 0), actionX);
-        }
-        if (targetTransform.GetComponent<Rigidbody>().velocity == Vector3.zero)
-        {
-            AddReward(10f);
-            EndEpisode();
         }
             if ((targetTransform.localPosition.y - transform.localPosition.y) < -4f ||
             Mathf.Abs(targetTransform.localPosition.x - transform.localPosition.x) >10f ||
