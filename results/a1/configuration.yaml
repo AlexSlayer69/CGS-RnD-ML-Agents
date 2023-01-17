@@ -28,7 +28,7 @@ behaviors:
         strength: 1.0
         network_settings:
           normalize: false
-          hidden_units: 128
+          hidden_units: 64
           num_layers: 2
           vis_encode_type: simple
           memory: null
@@ -37,7 +37,7 @@ behaviors:
     init_path: null
     keep_checkpoints: 5
     checkpoint_interval: 500000
-    max_steps: 1000000
+    max_steps: 3000000
     time_horizon: 64
     summary_freq: 50000
     threaded: false
@@ -65,8 +65,8 @@ environment_parameters: null
 checkpoint_settings:
   run_id: a1
   initialize_from: null
-  load_model: false
-  resume: false
+  load_model: true
+  resume: true
   force: true
   train_model: false
   inference: false
